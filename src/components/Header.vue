@@ -1,41 +1,23 @@
 <template>
-  <div class="header-container">
-    <div class="header">
-      <h6>Home</h6>
-      <h6>About</h6>
-      <h6>Contact</h6>
-    </div>
+  <div class="header">
+      <h2 class="logo">Salih Khan</h2>
+    
   </div>
 </template>
 
-
-<script>
-export default {
-  name: 'header'
-}
-</script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.header-container {
-  display: flex; /* Makes the container a flexbox */
-  justify-content: center; /* Centers the header horizontally */
-  align-items: center; /* Centers vertically, if necessary */
-  width: 100%; /* Ensures the container spans the full width of the page */
+.header{
+  background-color: black;
 }
 
-.header {
-  display: inline-flex; /* Makes the header width fit its content */
-  gap: 3rem; /* Space between items */
-  background: #eee;
-  padding-inline: 3rem; /* Optional: Adds space around the content inside the header */
-  border-radius: 7.5rem;
+.logo {
+  font-size: 6rem;;
+  font-family: 'Oregan Invisible';
+  text-align: center;
+  margin: 0;
+  background-image: linear-gradient(to right, #8626f5, #feb47b); /* Gradient colors */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  color: transparent; /* Make text color transparent so the gradient shows */
 }
 
-.header h6 {
-  padding-inline: 0.25rem; /* Optional: Adds space around h6 elements */
-}
 </style>
-
-
-
