@@ -1,86 +1,117 @@
 <template>
   <div class="home">
     <div class="s1">
-      <Header />
-      <h4 id="web_dev" class="animate-text">I am a web developer</h4>
+      <div class="content">
+        <div class="img_section">
+          <img src="../assets/Images/20241112_192110.jpg" alt="" width="400" height="400">
+        </div>  
+        <div class="info_section">
+          <h1>Hi, I'm Salih</h1>
+          <h3>Web developer</h3>
+          <p>I am a full stack developer.</p>
+        </div>  
+      </div>
+      <h1 id="scroll">I think you should scroll</h1>
 
-      <img src="../assets//Images/click-element.gif" alt="" width="600" height="500" id="img">
+
+    </div>
+
+    <div class="s1_end"></div>
+
+    <div class="s2">
+
+      <div class="s2_inner">
+
+      </div>
     </div>
   </div>
 </template>
 
-<script>
-import Header from '@/components/Header.vue';
-
-export default {
-  name: 'HomeView',
-  components: {
-    Header,
-  },
-};
-</script>
-
 <style>
-@font-face {
-  font-family: 'Oregan';
-  src: url('../assets/Fonts/Oregon/OregonLdoBook-4BYD.ttf');
-}
-
-@font-face {
-  font-family: 'Oregan Invisible';
-  src: url('../assets/Fonts/Oregon/OregonLdoVanishingBold-mLmv.ttf');
-}
-
-.home {
-  margin: 0;
-  padding: 0;
-}
-
-.s1 {
+.s1{
   width: 100vw;
-  height: 100vh;
-  /* background: url('../assets/Images/2590670.webp'); */
+  height: 90vh;
+  position: relative;
   background-color: black;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  margin: 0;
-  padding: 0;
 }
 
-#web_dev {
-  color: purple;
-  text-align: center;
+#scroll{
+  position: absolute;
+  bottom: 0px;
+  width: auto;
+  margin: auto;
+  color: black;
+  font-size: 1rem;
+  left: 50%;
+  transform: translate(-50%, 2.5rem);
   font-family: 'Oregan';
-  font-size: 2rem;
-  overflow: hidden; /* Ensures text is hidden while animating */
+  background-color: gold;
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
 
-.animate-text {
-  display: inline-block; /* Inline-block ensures the animation works with block containers */
-  animation: slide-in 2s ease-out forwards; /* Runs the slide-in animation */
-  white-space: nowrap; /* Prevents text from wrapping during the animation */
-}
-
-/* Animation Keyframes */
-@keyframes slide-in {
-  0% {
-    transform: translateX(-100%); /* Start off-screen to the left */
-    opacity: 0; /* Fully transparent at the start */
-  }
-  100% {
-    transform: translateX(200%); /* Slide into place */
-    opacity: 1; /* Fully visible at the end */
-  }
-}
-
-#img{
+.content{
+  width: 1000px;
   text-align: center;
-    justify-content: center;
-    display: flex;
-    margin: auto;
-    align-items: center;
-    border-radius: 3rem;
-    transform: translateY(25%);
+  justify-content: center;
+  margin: auto;
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.info_section{
+  text-align: left;
+  font-weight: lighter;
+  color: white;
+  font-family: "Oregan";
+}
+
+.info_section h1{
+  border-left: 5px solid yellow;
+  color: white;
+  padding-left: 1rem;
+}
+
+.img_section img{
+  box-shadow: 10px 10px 0px  white;
+}
+
+.s1_end{
+  height: 10vh;
+  background-color: white;
+  background-image: url("../assets/Images/grid_black.jpg");
+  background-attachment: fixed; 
+  background-position: center; 
+  background-repeat: repeat; 
+  background-size: 200px;
+}
+
+
+
+.s2{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-image: url("../assets/Images/darkbg.webp");
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.s2_inner{
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  width: 1000px; 
+  height: 600px; 
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.5); 
+  /* Slight white background with transparency */ 
+  backdrop-filter: blur(5px); /* Frosted glass effect */ 
+  -webkit-backdrop-filter: blur(5px); /* Support for Safari */ 
+  border-radius: 15px; /* Optional: Rounded corners for a polished look */ 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow for a 3D effect */ 
+  color: white; /* Text color */
 }
 </style>
