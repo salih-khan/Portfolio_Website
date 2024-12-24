@@ -168,6 +168,8 @@ export default {
 .s1 {
     width: 100%;
     height: 90vh;
+    display: flex;
+    justify-content: center;
     position: relative;
     background-color: black;
 }
@@ -226,7 +228,7 @@ export default {
 }
 
 .s2 {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: relative;
     /* background-image: url("../assets/Images/darkbg.webp");
@@ -237,17 +239,15 @@ export default {
 }
 
 .s2_inner {
-    position: absolute;
-    top: 0;
-    left: 50%;
+    position: relative;
     width: 100%;
     height: 100%;
-    transform: translate(-50%, 0%);
     border-radius: 1.25rem;
     border-bottom: 0px;
     background: radial-gradient(circle at top, rgba(20, 0, 34, 0.5), rgba(0, 0, 0, 0.2));
     /* Slight white background with transparency */
     color: white;
+    margin-block: 5em;
     /* Text color */
 }
 
